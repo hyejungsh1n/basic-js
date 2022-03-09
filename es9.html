@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1><a href="index.html">WEB</a></h1>
-    <input id="night_day" type="button" value="night"
-        onclick="    
-        var target = document.querySelector('body');
-        if(this.value === 'night') {
+    <script>
+    function nightDayHandler(self2) {
+      var target = document.querySelector('body');
+        if(self2.value === 'night') {
             target.style.backgroundColor = 'black';
             target.style.color = 'white';
-            this.value = 'day';
+            self2.value = 'day';
 
             let alist = document.querySelectorAll('a') // a태그 전부 다 불러온 것을 변수로 지정
             let i = 0;
@@ -23,9 +19,20 @@
         } else {
             target.style.backgroundColor = 'white';
             target.style.color = 'black';
-            this.value = 'night';
+            self2.value = 'night';
         
         }
+      }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night"
+        onclick="nightDayHandler(this);
+        ">
+    <input id="night_day" type="button" value="night"
+        onclick="nightDayHandler(this);
+
         ">
           <ol>
             <li><a href="1.html">HTML</a></li>
@@ -38,3 +45,5 @@
           </p>
 </body>
 </html>
+
+
