@@ -15,21 +15,23 @@
         document.querySelector('body').style.color= color;
     } 
     function BodySetBackgroundColor(color) {
-        document.querySelector('body').style.backgroundColor= 'black';
+        document.querySelector('body').style.backgroundColor= color;
     }
+
     function nightDayHandler(self2) {
       var target = document.querySelector('body');
         if(self2.value === 'night') {
-            BodySetBackgroundColor('black');
-            BodySetColor('white');
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
             self2.value = 'day';
-            LinksSetColor('powderblue')
+
+            LinksSetColor('yellow')
         } else {
-            target.style.backgroundColor = 'white';
-            BodySetColor('black');
+            Body.setBackgroundColor('white');
+            Body.setColor('black');
             self2.value = 'night';
-            LinksSetColor('yellow');
-        
+
+            LinksSetColor('blue');
         }
       }
     </script>
